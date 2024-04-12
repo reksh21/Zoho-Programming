@@ -29,10 +29,10 @@ int main()
         {
             if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/')
             {
-                if((isalpha(s[i-1]) && isalpha(s[i+1])) ||
-                   (s[i-1]==')' && s[i+1]=='(') ||
-                   (s[i-1]==')' && isalpha(s[i+1])) ||
-                   (isalpha(s[i-1]) && s[i+1]=='('))
+                if((isalpha(s[i-1]) && isalpha(s[i+1])) ||       // a+b
+                   (s[i-1]==')' && s[i+1]=='(') ||               // )+(
+                   (s[i-1]==')' && isalpha(s[i+1])) ||           // )+a
+                   (isalpha(s[i-1]) && s[i+1]=='('))             // a+(
                    {
                        flag = 1;
                    }
